@@ -1,9 +1,11 @@
 import React from 'react'
 import myImg from "../assets/myimg.jpg"
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-scroll";
+
 function Home() {
     return (
-        <div name="home" className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'>
+        <div name="home" className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 '>
             <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
                 <div className='flex flex-col justify-center h-full'>
                     <h1 className='text-4xl sm:text-7xl font-bold text-white'>I'm a MERN Stack Developer</h1>
@@ -12,14 +14,14 @@ function Home() {
 
                     </p>
                     <div>
-                        <button className='text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r  from-blue-500 to-green-500 cursor-pointer group'>
+                        <Link to='portfolio' smooth duration={500} className='text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r  from-blue-500 to-green-500 cursor-pointer group'>
                             Portfolio
                            <span className='group-hover:rotate-90 duration-300 '><FaAngleRight size={25} className='ml-1'/></span> 
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div>
-                    <img src={myImg} alt="My profile Img" className='rounded-2xl mx-auto md:w-fill' />
+                    <img src={myImg} alt="My profile Img" className='rounded-2xl mx-auto  md:w-full' />
                 </div>
             </div>
         </div>
